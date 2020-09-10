@@ -30,7 +30,7 @@
   <form
     #userForm="ngForm"
     *ngIf="!submitted"
-    (ngSubmit)="onSubmit()"
+    (ngSubmit)="onSubmit(userForm)"
     novalidate
   >
     <!-- {{ userForm.form.valid }} -->

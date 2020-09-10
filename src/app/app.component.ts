@@ -11,7 +11,7 @@ export class AppComponent {
   topics = ['Angular', 'React', 'Vue'];
 
   userModel = new User(
-    '',
+    'bharath',
     'bharathjinka09@gmail.com',
     9110334114,
     'default',
@@ -33,8 +33,8 @@ export class AppComponent {
   }
   constructor(private _enrollmentService: EnrollmentService) {}
 
-  onSubmit() {
-    console.log(this.userModel);
+  onSubmit(userForm) {
+    console.log(userForm);
     this.submitted = true;
     this._enrollmentService.enroll(this.userModel).subscribe(
       (data) => (this.successMsg = data.statusText),
