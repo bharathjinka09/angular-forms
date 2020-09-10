@@ -20,10 +20,10 @@
 
   <h1 class="text-center">Bootcamp Enrollment Form</h1>
   <div class="alert alert-danger" *ngIf="errorMsg">
-    {{ errorMsg }}
+    Server Error !
   </div>
 
-  <div class="alert alert-success" *ngIf="submitted">
+  <div class="alert alert-success" *ngIf="submitted && !errorMsg">
     Registered Successfully !
   </div>
   
