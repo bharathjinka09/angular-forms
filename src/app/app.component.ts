@@ -10,7 +10,7 @@ export class AppComponent {
   topics = ['Angular', 'React', 'Vue'];
 
   userModel = new User(
-    'Bharath',
+    '',
     'bharathjinka09@gmail.com',
     9110334114,
     '',

@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "ng build --prod --base-href https://bharathjinka09.github.io/angular-forms/ && ngh --dir dist/tdf",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
