@@ -19,8 +19,21 @@
     </div> -->
 
   <h1 class="text-center">Bootcamp Enrollment Form</h1>
-  <form #userForm="ngForm">
-    {{ userForm.form.valid }}
+  <div class="alert alert-danger" *ngIf="errorMsg">
+    {{ errorMsg }}
+  </div>
+
+  <div class="alert alert-success" *ngIf="submitted">
+    Registered Successfully !
+  </div>
+  
+  <form
+    #userForm="ngForm"
+    *ngIf="!submitted"
+    (ngSubmit)="onSubmit()"
+    novalidate
+  >
+    <!-- {{ userForm.form.valid }} -->
     <!-- {{ userForm.value | json }}
     <hr />
     {{ userModel | json }} -->
@@ -147,6 +160,12 @@
       <label class="form-check-label"> Send me promotional offers </label>
     </div>
 
-    <button [disabled]="userForm.form.invalid || topicHasError" class="btn btn-primary mb-5" type="submit">Submit form</button>
+    <button
+      [disabled]="userForm.form.invalid || topicHasError"
+      class="btn btn-primary mb-5"
+      type="submit"
+    >
+      Submit form
+    </button>
   </form>
 </div>
